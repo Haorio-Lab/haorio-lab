@@ -2,7 +2,7 @@
 title: 'Tailscale로 VPS에 안전하게 SSH 붙이기'
 description: '맥과 윈도우에서 Tailscale을 이용해 VPS에 더 편하고 안전하게 SSH 접속한 과정 정리.'
 pubDate: '2026-04-10'
-heroImage: '/images/openclaw-vps-first-steps.jpg'
+heroImage: '/images/tailscale-ssh-vps-setup.jpg'
 category: 'Server / VPS'
 tags:
   - tailscale

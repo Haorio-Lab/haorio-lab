@@ -2,7 +2,7 @@
 title: 'Telegram bot을 분리 운영하면서 겪은 충돌과 해결'
 description: '기존 bot과 새 bot을 분리 운영하는 과정에서 생긴 conflict, pairing, auth 문제를 정리한 기록.'
 pubDate: '2026-04-10'
-heroImage: '/images/haorio-lab-launch-notes.jpg'
+heroImage: '/images/telegram-bot-multi-instance-notes.jpg'
 category: 'AI / Automation'
 tags:
   - telegram
