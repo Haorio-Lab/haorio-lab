@@ -15,40 +15,44 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } = 
 		<BaseHead title={title} description={description} />
 		<style>
 			main {
-				width: calc(100% - 2em);
+				width: min(var(--max-content), calc(100% - 1rem));
 				max-width: 100%;
-				margin: 0;
+				margin: 0 auto;
+			}
+			article {
+				display: grid;
+				gap: 1.25rem;
 			}
 			.hero-image {
 				width: 100%;
 			}
 			.hero-image img {
 				display: block;
-				width: min(1020px, calc(100% - 2rem));
+				width: min(1020px, 100%);
 				margin: 0 auto;
-				border-radius: 12px;
+				border-radius: 16px;
 				box-shadow: var(--box-shadow);
+				aspect-ratio: 2 / 1;
+				object-fit: cover;
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
+				width: min(var(--max-reading), 100%);
 				margin: auto;
-				padding: 1em;
+				padding: 0.5rem 0 0;
 				color: rgb(var(--gray-dark));
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+				margin-bottom: 1.4rem;
+				padding: 0.5rem 0 0;
+				text-align: left;
 			}
 			.title h1 {
-				margin: 0.35em 0 0.5em 0;
+				margin: 0.4rem 0 0.7rem 0;
 				line-height: 1.15;
 			}
 			.meta {
 				display: flex;
-				justify-content: center;
+				justify-content: flex-start;
 				gap: 0.5rem;
 				flex-wrap: wrap;
 				margin-bottom: 0.8rem;
@@ -60,29 +64,42 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } = 
 				border-radius: 999px;
 				background: rgba(var(--accent), 0.08);
 				color: rgb(var(--accent-dark));
-				font-size: 0.9rem;
-				font-weight: 600;
+				font-size: 0.88rem;
+				font-weight: 700;
 			}
 			.date {
-				margin-bottom: 0.5em;
+				margin-bottom: 0.2rem;
 				color: rgb(var(--gray));
+				font-size: 0.96rem;
 			}
 			.last-updated-on {
 				font-style: italic;
+				margin-top: 0.2rem;
 			}
 			.tags {
 				display: flex;
-				gap: 0.5rem;
-				justify-content: center;
+				gap: 0.45rem;
+				justify-content: flex-start;
 				flex-wrap: wrap;
-				margin-top: 1rem;
+				margin-top: 0.8rem;
 			}
 			.tag {
 				padding: 0.28rem 0.65rem;
 				border-radius: 999px;
 				background: rgba(var(--gray), 0.12);
 				color: rgb(var(--gray-dark));
-				font-size: 0.88rem;
+				font-size: 0.84rem;
+			}
+			@media (max-width: 720px) {
+				main {
+					width: calc(100% - 1rem);
+				}
+				.hero-image img {
+					border-radius: 14px;
+				}
+				.prose {
+					padding-top: 0;
+				}
 			}
 		</style>
 	</head>

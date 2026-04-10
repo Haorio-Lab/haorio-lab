@@ -12,28 +12,30 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<style>
 			.hero {
 				display: grid;
-				gap: 1.5rem;
-				padding: 2rem 0 1rem;
+				gap: 1.25rem;
+				padding: 1rem 0 1.5rem;
 			}
 			.badge {
 				display: inline-block;
 				width: fit-content;
-				padding: 0.4rem 0.8rem;
+				padding: 0.42rem 0.82rem;
 				border-radius: 999px;
 				background: rgba(var(--accent), 0.12);
 				color: rgb(var(--accent-dark));
 				font-size: 0.92rem;
-				font-weight: 600;
+				font-weight: 700;
 			}
 			h1 {
-				font-size: clamp(2.4rem, 5vw, 4.2rem);
-				line-height: 1.05;
+				font-size: clamp(2.3rem, 5vw, 4.6rem);
+				line-height: 1.02;
 				margin: 0;
+				max-width: 12ch;
 			}
 			.lead {
-				font-size: 1.15rem;
+				font-size: clamp(1rem, 1.4vw, 1.16rem);
 				color: rgb(var(--gray-dark));
-				max-width: 48rem;
+				max-width: 52rem;
+				margin: 0;
 			}
 			.grid {
 				display: grid;
@@ -42,25 +44,25 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				margin: 2rem 0;
 			}
 			.card {
-				padding: 1.2rem;
+				padding: 1.25rem;
 				border: 1px solid rgba(var(--gray), 0.2);
-				border-radius: 16px;
+				border-radius: 18px;
 				background: white;
 				box-shadow: 0 10px 30px rgba(var(--black), 0.04);
 			}
 			.card h2 {
 				margin-top: 0;
-				font-size: 1.1rem;
+				font-size: 1.08rem;
 			}
 			.cta {
 				display: flex;
-				gap: 1rem;
+				gap: 0.8rem;
 				flex-wrap: wrap;
-				margin-top: 1rem;
+				margin-top: 0.4rem;
 			}
 			.button {
 				display: inline-block;
-				padding: 0.8rem 1.1rem;
+				padding: 0.85rem 1.15rem;
 				border-radius: 999px;
 				text-decoration: none;
 				font-weight: 700;
@@ -75,10 +77,20 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			}
 			ul.clean {
 				padding-left: 1.2rem;
+				margin: 0.4rem 0 0;
+			}
+			.info {
+				max-width: var(--max-reading);
 			}
 			@media (max-width: 720px) {
 				.grid {
 					grid-template-columns: 1fr;
+				}
+				h1 {
+					max-width: none;
+				}
+				.button {
+					width: fit-content;
 				}
 			}
 		</style>
@@ -120,7 +132,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				</article>
 			</section>
 
-			<section>
+			<section class="info">
 				<h2>블로그 운영 방식</h2>
 				<p>
 					이 블로그는 실제 사용 경험과 시행착오를 중심으로 글을 쌓는다. 자동화와 서버 운영, AI 도구 활용,
