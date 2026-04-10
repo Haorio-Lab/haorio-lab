@@ -29,30 +29,32 @@ const posts = (await getBlogPosts()).sort((a, b) => b.data.pubDate.valueOf() - a
 				display: grid;
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 				gap: 1.25rem;
-				list-style-type: none;
+				list-style: none;
 				margin: 0;
 				padding: 0;
+				align-items: stretch;
 			}
 			ul li {
 				min-width: 0;
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				grid-column: 1 / -1;
+				display: flex;
 			}
 			.card-link {
-				display: block;
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				width: 100%;
 				padding: 1rem;
 				border-radius: 18px;
 				background: white;
 				border: 1px solid rgba(var(--gray), 0.18);
 				box-shadow: 0 10px 24px rgba(var(--black), 0.04);
-				height: 100%;
+				text-decoration: none;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				box-sizing: border-box;
+				overflow: hidden;
 			}
-			ul li img {
+			.card-link img {
+				display: block;
 				width: 100%;
 				margin-bottom: 0.75rem;
 				border-radius: 14px;
