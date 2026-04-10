@@ -2,10 +2,17 @@
 title: '기술 블로그를 다시 직접 만들어보기로 한 이유'
 description: 'Haorio Lab을 열며, 왜 직접 기록하고 쌓는 블로그를 다시 만들기로 했는지 정리한 글.'
 pubDate: '2026-04-10'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '/images/haorio-lab-launch-notes.jpg'
+category: 'Notes'
+tags:
+  - blog
+  - launch
+  - notes
+  - automation
+draft: false
 ---
 
-기술 관련 글을 남기는 방법은 많다. 짧게는 메신저 메모, 길게는 노션 문서, 더 가볍게는 소셜 미디어 스레드도 있다. 그런데 시간이 지나면 결국 다시 찾게 되는 건 정리된 블로그 글이다.
+기술 관련 글을 남기는 방법은 많다. 짧게는 메신저 메모, 길게는 문서 앱, 더 가볍게는 소셜 미디어 스레드도 있다. 그런데 시간이 지나면 결국 다시 찾게 되는 건 정리된 블로그 글이다.
 
 Haorio Lab은 그래서 시작했다. 단순히 글을 올리는 공간이 아니라, 직접 겪은 경험과 시행착오를 다시 꺼내 볼 수 있는 개인 실험실 같은 공간이 필요했다.
 
