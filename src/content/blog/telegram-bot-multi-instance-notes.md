@@ -10,7 +10,7 @@ tags:
   - openclaw
   - multi-instance
   - troubleshooting
-draft: true
+draft: false
 ---
 
 Telegram bot을 하나만 운영할 때는 설정이 단순하다. 하지만 기존 bot이 이미 돌고 있는 상태에서 새 bot을 별도 용도로 추가하려고 하면, 생각보다 금방 충돌과 구조 문제가 튀어나온다.
