@@ -10,7 +10,7 @@ tags:
   - vps
   - remote-access
   - troubleshooting
-draft: false
+draft: true
 ---
 
 VPS를 운영하다 보면 결국 가장 자주 하게 되는 일 중 하나가 SSH 접속이다. 문제는 이 작업이 자주 반복될수록, 그냥 public IP로 붙는 방식이 점점 불편하고 불안하게 느껴진다는 점이다.
