@@ -13,7 +13,6 @@ import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
-
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
@@ -22,49 +21,56 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
-    <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
+    <section id="hero" class="border-b border-border pt-10 pb-8">
+      <div class="max-w-3xl">
+        <div class="mb-3 inline-flex items-center gap-3">
+          <span class="rounded-full border border-border px-3 py-1 text-sm font-semibold text-accent">
+            Haorio Lab
+          </span>
+          <a
+            target="_blank"
+            href="/rss.xml"
+            class="inline-block"
+            aria-label="rss feed"
+            title="RSS Feed"
+          >
+            <IconRss
+              width={18}
+              height={18}
+              class="scale-110 stroke-accent stroke-3 rtl:-rotate-90"
+            />
+            <span class="sr-only">RSS Feed</span>
+          </a>
+        </div>
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+        <h1 class="my-4 text-4xl font-bold tracking-tight sm:my-6 sm:text-6xl">
+          기술, 자동화, 그리고 일상을 기록하는 실험실
+        </h1>
+
+        <p class="max-w-2xl text-lg leading-8 text-foreground/80">
+          VPS, NAS, AI 에이전트, Telegram bot, 자동화 워크플로우, 그리고 직접 부딪힌 삽질의 해결 기록까지.
+          Haorio Lab은 실제로 운영하면서 얻은 배움들을 차곡차곡 쌓는 개인 기술 블로그다.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <LinkButton href="/posts/">
+            글 보러 가기
+            <IconArrowRight class="inline-block rtl:-rotate-180" />
+          </LinkButton>
+          <LinkButton href="/about/" class="opacity-80 hover:opacity-100">
+            소개 보기
+          </LinkButton>
+        </div>
+
+        {
+          SOCIALS.length > 0 && (
+            <div class="mt-6 flex max-sm:flex-col sm:items-center">
+              <div class="me-2 mb-1 whitespace-nowrap text-sm font-medium sm:mb-0">Links</div>
+              <Socials />
+            </div>
+          )
+        }
+      </div>
     </section>
 
     {
