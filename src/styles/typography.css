@@ -3,18 +3,26 @@
 @layer base {
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
-    @apply prose;
+    @apply prose prose-lg max-w-none;
 
     h1,
     h2,
     h3,
     h4,
     th {
-      @apply mb-3 text-foreground;
+      @apply mb-3 font-semibold text-foreground;
+    }
+
+    h1 {
+      @apply text-3xl leading-tight sm:text-4xl;
+    }
+
+    h2 {
+      @apply mt-10 text-2xl leading-tight sm:text-3xl;
     }
 
     h3 {
-      @apply italic;
+      @apply mt-8 text-xl leading-snug;
     }
 
     p,
@@ -27,6 +35,10 @@
       @apply text-foreground;
     }
 
+    p {
+      @apply my-5 leading-8 text-foreground/90;
+    }
+
     a {
       @apply wrap-break-word text-foreground decoration-dashed underline-offset-4 hover:text-accent focus-visible:no-underline;
     }
@@ -37,6 +49,11 @@
 
     li {
       @apply marker:text-accent;
+    }
+
+    ul,
+    ol {
+      @apply my-5;
     }
 
     hr {
